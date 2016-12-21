@@ -133,6 +133,17 @@ var Hero = (function () {
     p.addEquipment = function (equipment) {
         this._equipments.push(equipment);
     };
+    p.getEquipmentsText = function () {
+        var text = "";
+        this._equipments.forEach(function (e) { return text = text + "fightPower:" + e.getFightPower() + "\n"
+            + "defensePower:" + e.getDefensePower() + "\n"; });
+        return text;
+    };
+    p.getJewelsText = function () {
+        var text = "";
+        this._equipments.forEach(function (e) { return text += e.getJewelsText(); });
+        return text;
+    };
     return Hero;
 }());
 egret.registerClass(Hero,'Hero');
@@ -170,6 +181,12 @@ var Equipment = (function () {
         }
         //console.log("Equipment:" + result);
         return this._cacheDefensePower;
+    };
+    p.getJewelsText = function () {
+        var text = "";
+        this._jewels.forEach(function (e) { return text = text + "fightPower:" + e.getFightPower() + "\n"
+            + "defensePower:" + e.getDefensePower() + "\n"; });
+        return text;
     };
     return Equipment;
 }());

@@ -85,7 +85,7 @@ class Hero {
     private _isInTeam: boolean = false;
     private _equipments: Equipment[] = [];
     private _hp: number;
-    private _name:string;
+    private _name: string;
     // level = 1;
     //quality: number = 2.0;
     private _level: number;
@@ -104,7 +104,7 @@ class Hero {
         this._name = name;
     }
 
-    get name(){
+    get name() {
         return this._name;
     }
 
@@ -143,6 +143,21 @@ class Hero {
 
     public addEquipment(equipment: Equipment): void {
         this._equipments.push(equipment);
+    }
+
+    public getEquipmentsText(): string {
+        var text: string = "";
+        this._equipments.forEach(e => text = text + "fightPower:" + e.getFightPower() + "\n"
+            + "defensePower:" + e.getDefensePower() + "\n"
+        );
+        return text;
+    }
+
+    public getJewelsText(): string {
+        var text: string = "";
+        this._equipments.forEach(e => text += e.getJewelsText()
+        );
+        return text;
     }
 }
 
@@ -188,6 +203,14 @@ class Equipment {
         }
         //console.log("Equipment:" + result);
         return this._cacheDefensePower;
+    }
+
+    public getJewelsText(): string {
+        var text: string = "";
+        this._jewels.forEach(e => text = text + "fightPower:" + e.getFightPower() + "\n"
+            + "defensePower:" + e.getDefensePower() + "\n"
+        );
+        return text;
     }
 }
 
