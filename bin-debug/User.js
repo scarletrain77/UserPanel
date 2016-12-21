@@ -85,7 +85,7 @@ var User = (function () {
 }());
 egret.registerClass(User,'User');
 var Hero = (function () {
-    function Hero(strength, quick, wisdom) {
+    function Hero(name, strength, quick, wisdom) {
         this._isInTeam = false;
         this._equipments = [];
         this._strength = strength;
@@ -93,8 +93,14 @@ var Hero = (function () {
         this._wisdom = wisdom;
         this._level = 0;
         this._hp = 50;
+        this._name = name;
     }
     var d = __define,c=Hero,p=c.prototype;
+    d(p, "name"
+        ,function () {
+            return this._name;
+        }
+    );
     d(p, "isInTeam"
         ,function () {
             return this._isInTeam;

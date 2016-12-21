@@ -105,7 +105,7 @@ var Main = (function (_super) {
         var equipment02 = new Equipment(2, 1, 1);
         equipment02.addJewel(jewel03);
         equipment02.addJewel(jewel04);
-        var hero = new Hero(1, 1, 1);
+        var hero = new Hero("a", 1, 1, 1);
         hero.addEquipment(equipment01);
         hero.addEquipment(equipment02);
         //hero.getFightPower();
@@ -118,7 +118,7 @@ var Main = (function (_super) {
         attackText.x = 100;
         attackText.y = 100;
         this.addChild(attackText);
-        this.addChild(new UserPanel(user));
+        this.addChild(new UserPanel(hero));
     };
     /**
      * 根据name关键字创建一个Bitmap对象。name属性请参考resources/resource.json配置文件的内容。

@@ -129,7 +129,7 @@ class Main extends egret.DisplayObjectContainer {
         equipment02.addJewel(jewel03);
         equipment02.addJewel(jewel04);
 
-        var hero:Hero = new Hero(1, 1, 1);
+        var hero:Hero = new Hero("a", 1, 1, 1);
         hero.addEquipment(equipment01);
         hero.addEquipment(equipment02);
         //hero.getFightPower();
@@ -144,7 +144,7 @@ class Main extends egret.DisplayObjectContainer {
         attackText.y = 100;
         this.addChild(attackText);
 
-        this.addChild(new UserPanel(user));
+        this.addChild(new UserPanel(hero));
     }
 
     /**

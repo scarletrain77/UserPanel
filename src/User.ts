@@ -85,6 +85,7 @@ class Hero {
     private _isInTeam: boolean = false;
     private _equipments: Equipment[] = [];
     private _hp: number;
+    private _name:string;
     // level = 1;
     //quality: number = 2.0;
     private _level: number;
@@ -94,12 +95,17 @@ class Hero {
     private _cacheFightPower: number;
     private _cacheDefensePower: number;
 
-    constructor(strength: number, quick: number, wisdom: number) {
+    constructor(name: string, strength: number, quick: number, wisdom: number) {
         this._strength = strength;
         this._quick = quick;
         this._wisdom = wisdom;
         this._level = 0;
         this._hp = 50;
+        this._name = name;
+    }
+
+    get name(){
+        return this._name;
     }
 
     get isInTeam() {

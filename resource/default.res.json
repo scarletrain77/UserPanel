@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "bg_jpg,egret_icon_png,description_json,bg2_jpg,egret_icon2_png,description2_json,hero_png",
+			"keys": "bg_jpg,egret_icon_png,description_json,bg2_jpg,egret_icon2_png,description2_json,hero_png,jewel_png,equipment_png",
 			"name": "preload"
 		}
 	],
@@ -40,6 +40,16 @@
 			"name": "hero_png",
 			"type": "image",
 			"url": "assets/hero.png"
+		},
+		{
+			"name": "jewel_png",
+			"type": "image",
+			"url": "assets/jewel.png"
+		},
+		{
+			"name": "equipment_png",
+			"type": "image",
+			"url": "assets/equipment.png"
 		}
 	]
 }
